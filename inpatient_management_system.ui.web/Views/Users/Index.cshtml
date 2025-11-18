@@ -1,0 +1,370 @@
+﻿@model inpatient_management_system.ui.web.Models.users_view_model
+
+
+@{
+    ViewBag.Title = "Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "frm_search" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+
+        <article>
+            <div class="pad">
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.dto.email, htmlAttributes: new { @class = "form-label" })
+                    @Html.EditorFor(model => model.dto.email, new { htmlAttributes = new { @required = "required", @class = "form-control", @placeholder = "Email", @id = "txtemail", @type = "email" } })
+                    @Html.ValidationMessageFor(model => model.dto.email, "", new { @class = "lbl_error text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.dto.fullnames, htmlAttributes: new { @class = "form-label" })
+                    @Html.EditorFor(model => model.dto.fullnames, new { htmlAttributes = new { @required = "required", @class = "form-control", @placeholder = "Full Names", @id = "txtfullnames", @type = "text" } })
+                    @Html.ValidationMessageFor(model => model.dto.fullnames, "", new { @class = "lbl_error text-danger" })
+                </div>
+
+            </div>
+        </article>
+
+        <div class="form-group div_btn">
+            <input type="submit" value="Search" id="btnsearch" class="btn btn-success btn_class" />
+            <input type="button" value="Clear Search" id="btn_clear_search" class="btn btn-danger btn_class" />
+        </div>
+
+    </fieldset>
+}
+
+<hr />
+
+@if (Model != null)
+{
+    <h2 id="lbl_page_title">Users [ @Model.lst_dto.ToList().Count  ]</h2>
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary btn_class", @id = "btn_create_record" })
+    @Html.ActionLink("Delete All", "DeleteAll", null, new { @class = "btn btn-danger btn_class", @id = "btn_delete_all_records" })
+</p>
+
+
+<table class='table table-dark table-striped table-hover table-bordered table-sm table-success' id='tbl_users'>
+    <thead>
+        <tr>
+            <th width="40px">
+                <input type="checkbox" name="chk_choose_all_records" id="chk_choose_all_records" />
+            </th>
+            <th width="40px">
+                <span>ID</span>
+            </th>
+            <th width="200px">
+                <span>EMAIL</span>
+            </th>
+            <th width="150px">
+                <span>FULL NAMES</span>
+            </th>
+            <th width="120px">
+                <span>DATE OF BIRTH</span>
+            </th>
+            <th width="70px">
+                <span>GENDER</span>
+            </th>
+            <th>
+                <span>CREATED DATE</span>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody id="tbody_records">
+        @if (Model != null)
+        {
+            foreach (var item in Model.lst_dto)
+            {
+                <tr>
+                    <td>
+                        <input type="checkbox" name="chk_record" class="chk_record" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.id)
+                    </td>
+                    <td class="bg-info">
+                        @Html.DisplayFor(modelItem => item.email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fullnames)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dob)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.gender)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.created_date)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn_table btn btn-success", onclick = "return Edit(" + item.id + ")" })
+                        @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn_table btn btn-primary", onclick = "return Details(" + item.id + ")" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn_table btn btn-danger", onclick = "return Delete(" + item.id + ")" })
+                    </td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>
+
+
+<!-- delete Product Modal -->
+<div class="modal fade" id="delete_product_modal" tabindex="-1" role="dialog" aria-labelledby="delete_product_Modal_Label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="delete_product_Modal_Label">Delete Product</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div id="div_delete_modal_msg"></div>
+                </div>
+
+                <div class="form-group">
+                    <label id="lbldeleteprompt"></label>
+                    <input type="hidden" id="delete_product_hidden_id">
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" title="Delete" class="btn btn-primary" onclick="purge_product()"><img src="images/delete.png" title="Delete" style="vertical-align:bottom;" /> Delete</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // delete Product Modal -->
+@section Scripts {
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            document.getElementById('btn_clear_search').addEventListener('click', function (event) {
+                event.preventDefault();
+                clear_search();
+                wire_checkboxes();
+            });
+
+            document.getElementById('btnsearch').addEventListener('click', function (event) {
+                event.preventDefault();
+                search();
+                wire_checkboxes();
+            });
+
+            var records_count = @Model.lst_dto.ToList().Count;
+            $("#btn_users").text(" Users [" + records_count + "]");
+
+            wire_checkboxes();
+
+            function search() {
+                try {
+
+                    var email = $("#txtemail").val();
+                    var fullnames = $("#txtfullnames").val();
+                    $("#chk_choose_all_records").prop("checked", false);
+
+                    $.ajax({
+                        url: '@Url.Action("search", "Users")',
+                        type: 'POST',
+                        data: {
+                            "email": email,
+                            "fullnames": fullnames
+                        },
+                        success: function (data) {
+                            console.log(data);
+                            var users = data.lst_dto;
+                            console.log(users);
+                            var count = users.length;
+                            console.log(count);
+                            $("#btn_users").text(" Users [ " + count + " ]");
+                            $("#lbl_page_title").text(" Users [ " + count + " ]");
+                            $("#tbody_records").html("");
+                            var row = "";
+                            $.each(users, function (index, item) {
+                                row += "<tr>"
+                                row += "<td><input type='checkbox' name=chk_record' class='chk_record' /></td>";
+                                row += "<td>" + item.id + "</td>";
+                                row += "<td>" + item.email + "</td>";
+                                row += "<td>" + item.fullnames + "</td>";
+                                row += "<td>" + item.dob + "</td>";
+                                row += "<td>" + item.gender + "</td>";
+                                row += "<td>" + item.created_date + "</td>";
+                                row += "<td>";
+                                row += "<a href='@Url.Action("Edit", "Users", new { })'(" + item.id + ")' class='btn_table btn btn-success'>Edit</a>";
+                                row += "<a href='@Url.Action("Detail", "Users", new { })'(" + item.id + ")' class='btn_table btn btn-primary'>Detail</a>";
+                                row += "<a href='@Url.Action("Delete", "Users", new { })'(" + item.id + ")' class='btn_table btn btn-danger'>Delete</a>";
+                                row += "</td>";
+                                row += "</tr>"
+                            });
+                            $("#tbody_records").html(row);
+                        }
+                    });
+
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+
+            function clear_search() {
+                try {
+
+                    $("#txtemail").val("");
+                    $("#txtfullnames").val("");
+                    $("#chk_choose_all_records").prop("checked", false);
+
+                    var email = $("#txtemail").val();
+                    var fullnames = $("#txtfullnames").val();
+
+                    $("#tbody_records").html("");
+
+                    $.ajax({
+                        url: '@Url.Action("search", "Users")',
+                        type: 'POST',
+                        data: {
+                            "email": email,
+                            "fullnames": fullnames
+                        },
+                        success: function (data) {
+                            console.log(data);
+                            var users = data.lst_dto;
+                            console.log(users);
+                            var count = users.length;
+                            console.log(count);
+                            $("#btn_users").text(" Users [ " + count + " ]");
+                            $("#lbl_page_title").text(" Users [ " + count + " ]");
+                            $("#tbody_records").html("");
+                            var row = "";
+                            $.each(users, function (index, item) {
+                                row += "<tr>";
+                                row += "<td><input type='checkbox' name=chk_record' class='chk_record' /></td>";
+                                row += "<td>" + item.id + "</td>";
+                                row += "<td>" + item.email + "</td>";
+                                row += "<td>" + item.fullnames + "</td>";
+                                row += "<td>" + item.dob + "</td>";
+                                row += "<td>" + item.gender + "</td>";
+                                row += "<td>" + item.created_date + "</td>";
+                                row += "<td>";
+                                row += "<a href='@Url.Action("Edit", "Users", new { })'(" + item.id + ")' class='btn_table btn btn-success'>Edit</a>";
+                                row += "<a href='@Url.Action("Detail", "Users", new { })'(" + item.id + ")' class='btn_table btn btn-primary'>Detail</a>";
+                                row += "<a href='@Url.Action("Delete", "Users", new { })'(" + item.id + ")' class='btn_table btn btn-danger'>Delete</a>";
+                                row += "</td>";
+                                row += "</tr>";
+                            });
+                            $("#tbody_records").html(row);
+                        }
+                    });
+
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+
+            function wire_checkboxes() {
+                //select all checkboxes
+                $("#chk_choose_all_records").on("click", function () {
+                    var chk_status = this.checked;
+                    //iterate all checkbox items
+                    $(".chk_record").each(function () {
+                        this.checked = chk_status;
+                    });
+                });
+
+                //check or uncheck selectall, if one of the listed checkbox items is checked/unchecked
+                $(".chk_record").on("click", function () {
+                    if ($(".chk_record:checked").length == $(".chk_record").length) {
+                        $("#chk_choose_all_records").prop("checked", true);
+                    } else {
+                        $("#chk_choose_all_records").prop("checked", false);
+                    }
+                });
+            }
+
+
+            //Delete Record
+            function Delete(id) {
+
+                showprogressbar();
+
+                // Add product ID to the hidden field
+                $("#delete_product_hidden_id").val(id);
+
+                var _prompt_msg = "<span class='text-danger'>Are you sure, you really want to delete product with id [ " + id + " ]</span>";
+
+                $("#lbldeleteprompt").html(_prompt_msg);
+
+                // Open modal popup
+                $("#delete_product_modal").modal("show");
+
+                $('#delete_product_modal').on('shown.bs.modal', function (e) {
+
+                    $('#btndeleteproduct').on('click', function () {
+                        purge_product();
+                    });
+
+                });
+
+                hideprogressbar();
+
+            }
+
+            //Delete Record
+            function purge_product() {
+                showprogressbar();
+
+                // get hidden field value
+                var id = $("#delete_product_hidden_id").val();
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'delete_product_controller.php',
+                    data: {
+                        id: id
+                    } //data to be posted
+                }).done(function (data) {
+
+                    log_messages_modal(data);
+
+                    // hide modal popup
+                    $("#delete_product_modal").modal("hide");
+
+                    log_messages(data);
+
+                    // reload products by using readRecords();
+                    //readRecords();
+                    get_admin_products(1);
+
+                }).fail(function (jqXHR, textStatus) {
+                    log_messages_modal(textStatus);
+                    hideprogressbar();
+                });
+
+            }
+
+
+        });
+
+
+    </script>
+}
+
+
+
+
+
+
+
+

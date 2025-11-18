@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<div class="jumbotron">
+    <h1>Inpatient Management System</h1>
+    <p class="lead">Inpatient Management System helps hospitals manage records concerning their inpatients</p>
+</div>
+
+<div class="navbar-collapse collapse">
+
+    <ul class="nav navbar-nav">
+
+        <li>
+            @Html.ActionLink(" doctors", "list", "doctors", routeValues: null, htmlAttributes: new { id = "doctorsLink" })
+        </li>
+
+        <li>
+            @Html.ActionLink("rooms", "list", "rooms", routeValues: null, htmlAttributes: new { id = "roomsLink" })
+        </li>
+
+        <li>
+            @Html.ActionLink("patients", "list", "patients", routeValues: null, htmlAttributes: new { id = "patientsLink" })
+        </li>
+
+        <li>
+            @Html.ActionLink("medicines", "list", "medicines", routeValues: null, htmlAttributes: new { id = "medicinesLink" })
+        </li>
+
+        <li>
+            @Html.ActionLink("pharmacy", "list", "pharmacy", routeValues: null, htmlAttributes: new { id = "pharmacyLink" })
+        </li>
+
+        <li>
+            @Html.ActionLink("cashiers", "list", "cashiers", routeValues: null, htmlAttributes: new { id = "cashiersLink" })
+        </li>
+
+        <li>
+            @Html.ActionLink("users", "list", "users", routeValues: null, htmlAttributes: new { id = "usersLink" })
+        </li>
+
+    </ul>
+
+</div>
+
+

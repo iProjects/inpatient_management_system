@@ -1,0 +1,38 @@
+/* _variables.css */
+
+:root {
+    /* Color Palette */
+    --primary-color: #007bff; /* Main brand color (e.g., blue) */
+    --secondary-color: #6c757d; /* A neutral color for accents */
+    --background-light: #f4f4f4; /* Light background for sections */
+    --background-dark: #2c3e50; /* Dark background for sections or footer */
+    --text-dark: #222; /* Dark text for light backgrounds */
+    --text-light: #f8f9fa; /* Light text for dark backgrounds */
+    --text-primary-light: #ffffff; /* Light text for dark backgrounds */
+    --border-color: #ddd; /* Color for borders and lines */
+    --section-border-color: rgb(127, 126, 128); /* Color for borders and lines */
+    
+  
+    /* Typography */
+    --font-family-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-secondary: 'Roboto', sans-serif; /* You can pick a Google Font */
+    --font-size-base: 1rem;
+    --font-size-description: 2rem;
+    --heading-font-weight: 700;
+    
+    /* Spacing */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    --container-width: 900px;
+    --header-margin-bottom: 1rem;
+
+    --card-border-radius: 10px;
+    --card-background-color: #fff;
+    --section-margin: 0.1rem;  
+    --card-margin-bottom: 0.2rem;
+
+    --contact-form-background-dark: #333; 
+    --contact-card-margin-bottom: 0.1rem;
+  }
+

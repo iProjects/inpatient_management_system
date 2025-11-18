@@ -1,0 +1,488 @@
+==================================================================
+ERROR OCCOURED AT :11/11/2025 9:12:33 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 09:12:33 AM ]   
+*********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ mssql ].
+
+*********************************************************************************************
+Whole Exception:System.Exception: 
+[ 11-11-2025 09:12:33 AM ]   
+*********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ mssql ].
+
+*********************************************************************************************
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 9:12:34 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 09:12:33 AM ]   Database 'inpatient_management_db_2025' already exists. Choose a different database name.
+
+Whole Exception:System.Exception: 
+[ 11-11-2025 09:12:33 AM ]   Database 'inpatient_management_db_2025' already exists. Choose a different database name.
+
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 9:12:34 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 09:12:34 AM ]   
+*********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ mysql ].
+
+*********************************************************************************************
+Whole Exception:System.Exception: 
+[ 11-11-2025 09:12:34 AM ]   
+*********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ mysql ].
+
+*********************************************************************************************
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 9:12:35 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 09:12:34 AM ]   Can't create database 'inpatient_management_db_2025'; database exists
+
+Whole Exception:System.Exception: 
+[ 11-11-2025 09:12:34 AM ]   Can't create database 'inpatient_management_db_2025'; database exists
+
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 9:12:35 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 09:12:35 AM ]   
+**************************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ postgresql ].
+
+**************************************************************************************************
+Whole Exception:System.Exception: 
+[ 11-11-2025 09:12:35 AM ]   
+**************************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ postgresql ].
+
+**************************************************************************************************
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 9:12:36 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 09:12:35 AM ]   ERROR: 42P04: database "inpatient_management_db_2025" already exists
+
+Whole Exception:System.Exception: 
+[ 11-11-2025 09:12:35 AM ]   ERROR: 42P04: database "inpatient_management_db_2025" already exists
+
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 9:12:36 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 09:12:36 AM ]   sqlite datastore path with name [ databases ] exist.sqlite database with name [ inpatient_management_db_2025.sqlite3 ] exist.
+
+**********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ sqlite ].
+
+**********************************************************************************************
+Whole Exception:System.Exception: 
+[ 11-11-2025 09:12:36 AM ]   sqlite datastore path with name [ databases ] exist.sqlite database with name [ inpatient_management_db_2025.sqlite3 ] exist.
+
+**********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ sqlite ].
+
+**********************************************************************************************
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 9:12:37 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 09:12:36 AM ]   Retrieved [ 14 ] records.
+Whole Exception:System.Exception: 
+[ 11-11-2025 09:12:36 AM ]   Retrieved [ 14 ] records.
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 10:58:08 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 10:57:36 AM ]   
+*********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ mssql ].
+
+*********************************************************************************************
+Whole Exception:System.Exception: 
+[ 11-11-2025 10:57:36 AM ]   
+*********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ mssql ].
+
+*********************************************************************************************
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 10:58:27 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 10:58:09 AM ]   A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+
+The system cannot find the file specified
+
+
+The system cannot find the file specified
+
+
+The system cannot find the file specified
+
+Whole Exception:System.Exception: 
+[ 11-11-2025 10:58:09 AM ]   A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+
+The system cannot find the file specified
+
+
+The system cannot find the file specified
+
+
+The system cannot find the file specified
+
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 10:58:30 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 10:58:27 AM ]   
+*********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ mysql ].
+
+*********************************************************************************************
+Whole Exception:System.Exception: 
+[ 11-11-2025 10:58:27 AM ]   
+*********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ mysql ].
+
+*********************************************************************************************
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 10:58:36 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 10:58:31 AM ]   Unable to connect to any of the specified MySQL hosts.
+
+
+Unable to connect to any of the specified MySQL hosts.
+
+
+Unable to connect to any of the specified MySQL hosts.
+
+
+Unable to connect to any of the specified MySQL hosts.
+
+Whole Exception:System.Exception: 
+[ 11-11-2025 10:58:31 AM ]   Unable to connect to any of the specified MySQL hosts.
+
+
+Unable to connect to any of the specified MySQL hosts.
+
+
+Unable to connect to any of the specified MySQL hosts.
+
+
+Unable to connect to any of the specified MySQL hosts.
+
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 10:58:40 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 10:58:36 AM ]   
+**************************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ postgresql ].
+
+**************************************************************************************************
+Whole Exception:System.Exception: 
+[ 11-11-2025 10:58:36 AM ]   
+**************************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ postgresql ].
+
+**************************************************************************************************
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 10:58:46 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 10:58:40 AM ]   ERROR: 42P04: database "inpatient_management_db_2025" already exists
+
+Whole Exception:System.Exception: 
+[ 11-11-2025 10:58:40 AM ]   ERROR: 42P04: database "inpatient_management_db_2025" already exists
+
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 10:59:08 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 10:58:46 AM ]   sqlite datastore path with name [ databases ] exist.sqlite database with name [ inpatient_management_db_2025.sqlite3 ] exist.
+
+**********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ sqlite ].
+
+**********************************************************************************************
+Whole Exception:System.Exception: 
+[ 11-11-2025 10:58:46 AM ]   sqlite datastore path with name [ databases ] exist.sqlite database with name [ inpatient_management_db_2025.sqlite3 ] exist.
+
+**********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ sqlite ].
+
+**********************************************************************************************
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 10:59:27 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 10:59:08 AM ]   MongoDB.Driver.MongoConnectionException: Unable to connect to server 127.0.0.1:27017: Object reference not set to an instance of an object.. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at MongoDB.Driver.MongoServerInstance.RefreshStateAsSoonAsPossible()
+   at MongoDB.Driver.Internal.MongoConnection.HandleException(Exception ex)
+   at MongoDB.Driver.Internal.MongoConnection.SendMessage(BsonBuffer buffer, Int32 requestId)
+   at MongoDB.Driver.Internal.MongoConnection.SendMessage(MongoRequestMessage message)
+   at MongoDB.Driver.Operations.CommandOperation`1.Execute(MongoConnection connection)
+   at MongoDB.Driver.MongoServerInstance.RunCommandAs[TCommandResult](MongoConnection connection, String databaseName, IMongoCommand command)
+   at MongoDB.Driver.MongoServerInstance.Ping(MongoConnection connection)
+   at MongoDB.Driver.MongoServerInstance.Connect()
+   at MongoDB.Driver.Internal.DirectMongoServerProxy.Connect(TimeSpan timeout, ReadPreference readPreference)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Internal.DirectMongoServerProxy.Connect(TimeSpan timeout, ReadPreference readPreference)
+   at MongoDB.Driver.Internal.DirectMongoServerProxy.ChooseServerInstance(ReadPreference readPreference)
+   at MongoDB.Driver.MongoServer.AcquireConnection(ReadPreference readPreference)
+   at MongoDB.Driver.MongoDatabase.RunCommandAs[TCommandResult](IMongoCommand command, IBsonSerializer resultSerializer, IBsonSerializationOptions resultSerializationOptions)
+   at MongoDB.Driver.MongoDatabase.RunCommandAs[TCommandResult](IMongoCommand command)
+   at MongoDB.Driver.MongoDatabase.RunCommandAs[TCommandResult](String commandName)
+   at MongoDB.Driver.MongoDatabase.RunCommand(String commandName)
+   at MongoDB.Driver.MongoServer.GetDatabaseNames()
+   at MongoDB.Driver.MongoServer.DatabaseExists(String databaseName)
+   at inpatient_management_system.dal.mongodbapisingleton.connect_to_local_database() in d:\wakxpx\csharp\visualstudio\2013\inpatient_management_system\inpatient_management_system.dal\mongodbapisingleton.cs:line 156
+Whole Exception:System.Exception: 
+[ 11-11-2025 10:59:08 AM ]   MongoDB.Driver.MongoConnectionException: Unable to connect to server 127.0.0.1:27017: Object reference not set to an instance of an object.. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at MongoDB.Driver.MongoServerInstance.RefreshStateAsSoonAsPossible()
+   at MongoDB.Driver.Internal.MongoConnection.HandleException(Exception ex)
+   at MongoDB.Driver.Internal.MongoConnection.SendMessage(BsonBuffer buffer, Int32 requestId)
+   at MongoDB.Driver.Internal.MongoConnection.SendMessage(MongoRequestMessage message)
+   at MongoDB.Driver.Operations.CommandOperation`1.Execute(MongoConnection connection)
+   at MongoDB.Driver.MongoServerInstance.RunCommandAs[TCommandResult](MongoConnection connection, String databaseName, IMongoCommand command)
+   at MongoDB.Driver.MongoServerInstance.Ping(MongoConnection connection)
+   at MongoDB.Driver.MongoServerInstance.Connect()
+   at MongoDB.Driver.Internal.DirectMongoServerProxy.Connect(TimeSpan timeout, ReadPreference readPreference)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Internal.DirectMongoServerProxy.Connect(TimeSpan timeout, ReadPreference readPreference)
+   at MongoDB.Driver.Internal.DirectMongoServerProxy.ChooseServerInstance(ReadPreference readPreference)
+   at MongoDB.Driver.MongoServer.AcquireConnection(ReadPreference readPreference)
+   at MongoDB.Driver.MongoDatabase.RunCommandAs[TCommandResult](IMongoCommand command, IBsonSerializer resultSerializer, IBsonSerializationOptions resultSerializationOptions)
+   at MongoDB.Driver.MongoDatabase.RunCommandAs[TCommandResult](IMongoCommand command)
+   at MongoDB.Driver.MongoDatabase.RunCommandAs[TCommandResult](String commandName)
+   at MongoDB.Driver.MongoDatabase.RunCommand(String commandName)
+   at MongoDB.Driver.MongoServer.GetDatabaseNames()
+   at MongoDB.Driver.MongoServer.DatabaseExists(String databaseName)
+   at inpatient_management_system.dal.mongodbapisingleton.connect_to_local_database() in d:\wakxpx\csharp\visualstudio\2013\inpatient_management_system\inpatient_management_system.dal\mongodbapisingleton.cs:line 156
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 11:00:35 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 11:00:29 AM ]   
+*********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ mssql ].
+
+*********************************************************************************************
+Whole Exception:System.Exception: 
+[ 11-11-2025 11:00:29 AM ]   
+*********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ mssql ].
+
+*********************************************************************************************
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 11:00:40 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 11:00:35 AM ]   A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+
+The system cannot find the file specified
+
+
+The system cannot find the file specified
+
+
+The system cannot find the file specified
+
+Whole Exception:System.Exception: 
+[ 11-11-2025 11:00:35 AM ]   A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+
+The system cannot find the file specified
+
+
+The system cannot find the file specified
+
+
+The system cannot find the file specified
+
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 11:00:45 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 11:00:40 AM ]   
+*********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ mysql ].
+
+*********************************************************************************************
+Whole Exception:System.Exception: 
+[ 11-11-2025 11:00:40 AM ]   
+*********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ mysql ].
+
+*********************************************************************************************
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 11:00:51 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 11:00:45 AM ]   Unable to connect to any of the specified MySQL hosts.
+
+
+Unable to connect to any of the specified MySQL hosts.
+
+
+Unable to connect to any of the specified MySQL hosts.
+
+
+Unable to connect to any of the specified MySQL hosts.
+
+Whole Exception:System.Exception: 
+[ 11-11-2025 11:00:45 AM ]   Unable to connect to any of the specified MySQL hosts.
+
+
+Unable to connect to any of the specified MySQL hosts.
+
+
+Unable to connect to any of the specified MySQL hosts.
+
+
+Unable to connect to any of the specified MySQL hosts.
+
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 11:00:58 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 11:00:51 AM ]   
+**************************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ postgresql ].
+
+**************************************************************************************************
+Whole Exception:System.Exception: 
+[ 11-11-2025 11:00:51 AM ]   
+**************************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ postgresql ].
+
+**************************************************************************************************
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 11:01:20 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 11:00:58 AM ]   ERROR: 42P04: database "inpatient_management_db_2025" already exists
+
+Whole Exception:System.Exception: 
+[ 11-11-2025 11:00:58 AM ]   ERROR: 42P04: database "inpatient_management_db_2025" already exists
+
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 11:01:40 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 11:01:20 AM ]   sqlite datastore path with name [ databases ] exist.sqlite database with name [ inpatient_management_db_2025.sqlite3 ] exist.
+
+**********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ sqlite ].
+
+**********************************************************************************************
+Whole Exception:System.Exception: 
+[ 11-11-2025 11:01:20 AM ]   sqlite datastore path with name [ databases ] exist.sqlite database with name [ inpatient_management_db_2025.sqlite3 ] exist.
+
+**********************************************************************************************
+successfully created tables in database [ inpatient_management_db_2025 ] - server [ sqlite ].
+
+**********************************************************************************************
+==================================================================
+
+==================================================================
+ERROR OCCOURED AT :11/11/2025 11:01:45 AM
+SOURCE:
+MESSAGE:
+[ 11-11-2025 11:01:40 AM ]   MongoDB.Driver.MongoConnectionException: Unable to connect to server 127.0.0.1:27017: Object reference not set to an instance of an object.. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at MongoDB.Driver.MongoServerInstance.RefreshStateAsSoonAsPossible()
+   at MongoDB.Driver.Internal.MongoConnection.HandleException(Exception ex)
+   at MongoDB.Driver.Internal.MongoConnection.SendMessage(BsonBuffer buffer, Int32 requestId)
+   at MongoDB.Driver.Internal.MongoConnection.SendMessage(MongoRequestMessage message)
+   at MongoDB.Driver.Operations.CommandOperation`1.Execute(MongoConnection connection)
+   at MongoDB.Driver.MongoServerInstance.RunCommandAs[TCommandResult](MongoConnection connection, String databaseName, IMongoCommand command)
+   at MongoDB.Driver.MongoServerInstance.Ping(MongoConnection connection)
+   at MongoDB.Driver.MongoServerInstance.Connect()
+   at MongoDB.Driver.Internal.DirectMongoServerProxy.Connect(TimeSpan timeout, ReadPreference readPreference)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Internal.DirectMongoServerProxy.Connect(TimeSpan timeout, ReadPreference readPreference)
+   at MongoDB.Driver.Internal.DirectMongoServerProxy.ChooseServerInstance(ReadPreference readPreference)
+   at MongoDB.Driver.MongoServer.AcquireConnection(ReadPreference readPreference)
+   at MongoDB.Driver.MongoDatabase.RunCommandAs[TCommandResult](IMongoCommand command, IBsonSerializer resultSerializer, IBsonSerializationOptions resultSerializationOptions)
+   at MongoDB.Driver.MongoDatabase.RunCommandAs[TCommandResult](IMongoCommand command)
+   at MongoDB.Driver.MongoDatabase.RunCommandAs[TCommandResult](String commandName)
+   at MongoDB.Driver.MongoDatabase.RunCommand(String commandName)
+   at MongoDB.Driver.MongoServer.GetDatabaseNames()
+   at MongoDB.Driver.MongoServer.DatabaseExists(String databaseName)
+   at inpatient_management_system.dal.mongodbapisingleton.connect_to_local_database() in d:\wakxpx\csharp\visualstudio\2013\inpatient_management_system\inpatient_management_system.dal\mongodbapisingleton.cs:line 156
+Whole Exception:System.Exception: 
+[ 11-11-2025 11:01:40 AM ]   MongoDB.Driver.MongoConnectionException: Unable to connect to server 127.0.0.1:27017: Object reference not set to an instance of an object.. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at MongoDB.Driver.MongoServerInstance.RefreshStateAsSoonAsPossible()
+   at MongoDB.Driver.Internal.MongoConnection.HandleException(Exception ex)
+   at MongoDB.Driver.Internal.MongoConnection.SendMessage(BsonBuffer buffer, Int32 requestId)
+   at MongoDB.Driver.Internal.MongoConnection.SendMessage(MongoRequestMessage message)
+   at MongoDB.Driver.Operations.CommandOperation`1.Execute(MongoConnection connection)
+   at MongoDB.Driver.MongoServerInstance.RunCommandAs[TCommandResult](MongoConnection connection, String databaseName, IMongoCommand command)
+   at MongoDB.Driver.MongoServerInstance.Ping(MongoConnection connection)
+   at MongoDB.Driver.MongoServerInstance.Connect()
+   at MongoDB.Driver.Internal.DirectMongoServerProxy.Connect(TimeSpan timeout, ReadPreference readPreference)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Internal.DirectMongoServerProxy.Connect(TimeSpan timeout, ReadPreference readPreference)
+   at MongoDB.Driver.Internal.DirectMongoServerProxy.ChooseServerInstance(ReadPreference readPreference)
+   at MongoDB.Driver.MongoServer.AcquireConnection(ReadPreference readPreference)
+   at MongoDB.Driver.MongoDatabase.RunCommandAs[TCommandResult](IMongoCommand command, IBsonSerializer resultSerializer, IBsonSerializationOptions resultSerializationOptions)
+   at MongoDB.Driver.MongoDatabase.RunCommandAs[TCommandResult](IMongoCommand command)
+   at MongoDB.Driver.MongoDatabase.RunCommandAs[TCommandResult](String commandName)
+   at MongoDB.Driver.MongoDatabase.RunCommand(String commandName)
+   at MongoDB.Driver.MongoServer.GetDatabaseNames()
+   at MongoDB.Driver.MongoServer.DatabaseExists(String databaseName)
+   at inpatient_management_system.dal.mongodbapisingleton.connect_to_local_database() in d:\wakxpx\csharp\visualstudio\2013\inpatient_management_system\inpatient_management_system.dal\mongodbapisingleton.cs:line 156
+==================================================================
+

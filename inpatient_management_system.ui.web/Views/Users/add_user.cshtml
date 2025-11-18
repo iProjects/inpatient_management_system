@@ -1,0 +1,123 @@
+﻿@model inpatient_management_system.dto.user_dto
+
+@{
+    ViewBag.Title = "Create User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="page-title">Create User</h2>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "frm_add_user" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Ensure all required fields are filled.</legend>
+
+        <div class="add_user">
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "form-label" })
+                @Html.EditorFor(model => model.email, new { htmlAttributes = new { @required = "required", @class = "form-control", @placeholder = "Email", @type = "email" } })
+                @Html.ValidationMessageFor(model => model.email, "", new { @class = "lbl_error text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.password, htmlAttributes: new { @class = "form-label" })
+                @Html.EditorFor(model => model.password, new { htmlAttributes = new { @required = "required", @class = "form-control", @placeholder = "Password", @type = "password" } })
+                @Html.ValidationMessageFor(model => model.password, "", new { @class = "lbl_error text-danger" })
+                <p id="" class="">Password must be 8 and above characters and must contain an upper case letter, lower case letter, a number and a symbol.</p>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.fullnames, htmlAttributes: new { @class = "form-label" })
+                @Html.EditorFor(model => model.fullnames, new { htmlAttributes = new { @required = "required", @class = "form-control", @placeholder = "Full Names", @type = "text" } })
+                @Html.ValidationMessageFor(model => model.fullnames, "", new { @class = "lbl_error text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.gender, htmlAttributes: new { @class = "form-label" })
+                @Html.DropDownListFor(model => model.gender, new SelectList(Model.genders, "Value", "Text"), new { @class = "form-control", @id = "cbogender" })
+                @Html.ValidationMessageFor(model => model.gender, "", new { @class = "lbl_error text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.year, htmlAttributes: new { @class = "form-label" })
+                @Html.DropDownListFor(model => model.year, new SelectList(Model.years, "Value", "Text"), new { @class = "form-control", @id = "cboyears" })
+                @Html.ValidationMessageFor(model => model.year, "", new { @class = "lbl_error text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.month, htmlAttributes: new { @class = "form-label" })
+                @Html.DropDownListFor(model => model.month, new SelectList(Model.months, "Value", "Text"), new { @class = "form-control", @id = "cbomonths" })
+                @Html.ValidationMessageFor(model => model.month, "", new { @class = "lbl_error text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.day, htmlAttributes: new { @class = "form-label" })
+                @Html.DropDownListFor(model => model.day, new SelectList(Model.days, "Value", "Text"), new { @class = "form-control", @id = "cbodays" })
+                @Html.ValidationMessageFor(model => model.day, "", new { @class = "lbl_error text-danger" })
+            </div>
+
+        </div>
+
+        <div class="form-group div_btn">
+            <input type="submit" value="Create" class="btn btn-success btn_class" />
+            @Html.ActionLink("Users", "Index", "Users", null, new { @class = "btn btn-primary btn_class" })
+        </div>
+
+    </fieldset>
+}
+ 
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#email").focus();
+             
+            document.getElementById('cbomonths').addEventListener('change', function (event) {
+                event.preventDefault();
+                load_month_days();
+            });
+
+            function load_month_days() {
+                var selectedyear = $("#cboyears").val();
+                var selectedmonth = $("#cbomonths").val();
+                var cbodays = $("#cbodays");
+                cbodays.empty();
+
+                if (selectedyear != null && selectedyear != '' && selectedmonth != null && selectedmonth != '') {
+                    $.getJSON('@Url.Action("getmonthdays")',
+                        {
+                            year: selectedyear,
+                            month: selectedmonth
+                        }, function (days) {
+                            console.log(days);
+                            if (days != null && !jQuery.isEmptyObject(days)) {
+                                $.each(days, function (index, day) {
+                                    console.log(day);
+                                    console.log(index);
+                                    cbodays.append($('<option/>', {
+                                        value: day.Value,
+                                        text: day.Text
+                                    }))
+                                })
+                            }
+                        });
+                }
+            }
+
+            $("#cbomonths").on("change", function () {
+
+
+            });
+
+
+
+
+        });
+
+    </script>
+}
